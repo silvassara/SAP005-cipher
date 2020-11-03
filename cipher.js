@@ -1,6 +1,27 @@
 const cipher = {
-  // ...
+  encode: function(offset, string) {
+    var maiusculas = string.toUpperCase();
+    let novaStr = "";
+
+    for (let i = 0; i<maiusculas.length; i++){
+      let codigo = ((maiusculas.charCodeAt(i)-65+offset) %26) +65
+      novaStr += String.fromCharCode(codigo)
+    }
+    document.getElementById("result").innerHTML = novaStr;
+  }
+
+  decode: function(offset2, string2) {
+    let maiusculas2 = string2.toUpperCase();
+    let novaStr2 = "";
+
+    for (let e = 0; e<maiusculas2.length; e++){
+      let codigo2 = ((maiusculas2.charCodeAt(e)+65-offset2) %26) -65;
+      novaStr2 += String.fromCharCode(codigo2);
+    }
+    document.getElementById("result").innerHTML = novaStr2;
+  }
 };
+
 
 export default cipher;
 //[A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z]
@@ -11,26 +32,5 @@ export default cipher;
 // ((codigoDaLetraASC - cod1aLetra + desloc) % tamDoAlfabeto) + cod1aLetra
 //codigoASC -> codigo0a25 -> desloc -> giro -> codigoASC
 //               -65           +desl    %tam      +65
-function encode(offset, string) {
-  offset = offset % 26;
-  var maiusculas = string.toUpperCase();
-  var alfabeto = "abcdefghijklmnopqrstuvwxyz".split(" ");
-  var novaString = " ";
-  for (let crip = 0; crip<string.length; crip++){
-    var letraAtual = maiusculas[crip];
-    if(letraAtual === " ") {
-      novaString += letraAtual;
-      continue;
-    }
-    var indiceAtual = alfabeto.indexOf(letraAtual);
-    var novoIndice = indiceAtual + offset;
-    if (novoIndice> 25 ) novoIndice = novoIndice - 26;
-    if (novoIndice< 26 ) novoIndice = novoIndice + 26;
-    if (string[crip] === string[crip].toUpperCase()) {
-      novaString += alfabeto[novoIndice].toUpperCase();
-    }
-    else novaString += alfabeto[novoIndice];
-  }
-  return novaString
 
-}
+
