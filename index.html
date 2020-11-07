@@ -8,7 +8,7 @@
 
 
   <body>
-    
+
     <header>
         <h1 id = "root">CRYPME</h1>
         <p>CRIPTOGRAFIA DE MENSAGENS PARA UMA COMUNICAÇÃO MAIS SEGURA</p>
@@ -16,32 +16,30 @@
 
     <form>
         <label for="offset">DIGITE O DESLOCAMENTO ENTRE 1 E 3:</label>
-        <input 
+        <input
             type="number"
             id="desloc"
-            name="desloc" 
+            class="desloc"
+            name="desloc"
             min="1"
             max="3"
-            
+
         />
         <label for="mensagem">DIGITE A MENSAGEM DESEJADA:</label>
-        <input 
+        <input
             type="text"
             id="mensagem"
+            class="mensagem"
             name="mensagem"
-            
+
         />
     </form>
-         
-    
+
+
     <div class="flex-container">
         <button id="button">CRIPTOGRAFAR MENSAGEM</button>
-        <button id="button2">DESCRIPTOGRAFAR MENSAGEM</button>
+        <button id="button2" name="button2" >DESCRIPTOGRAFAR MENSAGEM</button>
     </div>
-    
-    <p id="resultado">RESULTADO:</p>
-    <p id="result"></p>
-
 
     <script src="index.js" type="module" ></script>
 </body>
