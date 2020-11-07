@@ -8,18 +8,14 @@ button2.addEventListener("click", decrip)
 
 function crip() {
     let deslocamento = Number(document.getElementById("desloc").value);
-    console.log(deslocamento)
     let msg =  document.getElementById("mensagem").value;
-    console.log(msg)
     document.getElementById("mensagem").value = cipher.encode(deslocamento, msg.toString().toUpperCase());
 
 }
 
 function decrip() {
     let deslocamento = Number(document.getElementById("desloc").value);
-    console.log(deslocamento)
     let msg =  document.getElementById("mensagem").value;
-    console.log(msg)
     document.getElementById("mensagem").value = cipher.decode(deslocamento, msg.toString().toUpperCase());
 
 }
