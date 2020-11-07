@@ -1,6 +1,5 @@
 const cipher = {
   encode(offset, string) {
-    console.log(string)
     const tamanhoAlfabeto = 26
     const letrasMaiusculas = 65
 
@@ -22,7 +21,6 @@ const cipher = {
 
   decode(offset, string) {
     const tamanhoAlfabeto = 26
-    const letrasMaiusculas = 65
     const fimAlfabeto = 90
 
     let novaStr = ''
