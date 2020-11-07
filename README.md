@@ -70,6 +70,6 @@ Acesse o CRYPME <a href="https://silvassara.github.io/SAP005-cipher/">aqui!</a>
 ### Projeto Final
 
 A interface foi escolhida com o objetivo de ser simples e prática visando apenas a criptografia e descriptografia de mensagens, sem compartilhamento externo.
-![crypme.png]
+
 
 
